@@ -1,0 +1,362 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[     14908,        352]
+NotebookOptionsPosition[     14006,        329]
+NotebookOutlinePosition[     14410,        345]
+CellTagsIndexPosition[     14367,        342]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"getSentament", " ", "=", " ", 
+    RowBox[{"Function", "[", 
+     RowBox[{"feed", ",", "\[IndentingNewLine]", 
+      RowBox[{"surveySentament", " ", "=", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Classify", "[", "\"\<Sentiment\>\"", "]"}], 
+         "\[IndentingNewLine]", "feeling"}], " ", "=", " ", 
+        RowBox[{
+         RowBox[{"surveySentament", "[", "feed", "]"}], "\[IndentingNewLine]", 
+         RowBox[{"Return", "[", "feeling", "]"}]}]}]}]}], 
+     "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"api", " ", "=", " ", 
+    RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"APIFunction", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"\"\<feedback\>\"", "\[Rule]", "\"\<String\>\""}], "}"}], 
+        ",", "\[IndentingNewLine]", 
+        RowBox[{"Function", "[", 
+         RowBox[{"getSentament", "[", 
+          RowBox[{"{", "#feedback", "}"}], "]"}], "]"}], ",", " ", 
+        RowBox[{"AllowedCloudExtraParameters", "\[Rule]", "All"}]}], "]"}], 
+      ",", "\[IndentingNewLine]", "\"\<SurveySentament\>\"", ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], 
+     "\[IndentingNewLine]", "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.806776899953946*^9, 3.8067769382484026`*^9}, {
+  3.8067769747270055`*^9, 3.8067770821491284`*^9}, {3.8067774348974*^9, 
+  3.8067775079943705`*^9}, {3.8067775513725123`*^9, 3.8067775708078265`*^9}, {
+  3.8067776242061577`*^9, 3.806777651543516*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"e1464f92-185f-49dc-982d-5cf1ba69ad68"],
+
+Cell[BoxData[
+ RowBox[{"Function", "[", 
+  RowBox[{"feed", ",", 
+   RowBox[{"surveySentament", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Classify", "[", "\<\"Sentiment\"\>", "]"}], " ", "feeling"}], 
+     "=", 
+     RowBox[{
+      RowBox[{"surveySentament", "[", "feed", "]"}], " ", 
+      RowBox[{"Return", "[", "feeling", "]"}]}]}]}]}], "]"}]], "Output",
+ CellChangeTimes->{3.8067777063053646`*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"6dd92014-3cf2-47b1-be32-42ee14140f46"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/dmarcr1997/SurveySentament\"", 
+     "https://www.wolframcloud.com/obj/dmarcr1997/SurveySentament"},
+    "HyperlinkURL"], "]"}],
+  CloudObject["https://www.wolframcloud.com/obj/dmarcr1997/SurveySentament"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.8067777066273637`*^9},
+ CellLabel->"Out[14]=",ExpressionUUID->"0263c02f-8ec9-4178-9b31-2ff05f9a0f45"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudObjectInformation", "[", "api", "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->"In[15]:=",ExpressionUUID->"72d3ccd3-3715-47bd-ba18-5b010479c73b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  PanelBox[
+   TagBox[GridBox[{
+      {
+       TemplateBox[{
+         StyleBox[
+         "\"CloudObject: \"", FontColor -> GrayLevel[0.5], StripOnInput -> 
+          False], "\"SurveySentament\""},
+        "RowDefault"]},
+      {
+       ItemBox[
+        TagBox[
+         DynamicModuleBox[{Typeset`var$$ = True}, 
+          InterpretationBox[
+           StyleBox[
+            PaneSelectorBox[{False->GridBox[{
+               {
+                OpenerBox[Dynamic[Typeset`var$$],
+                 Appearance->Automatic,
+                 AutoAction->False,
+                 ContinuousAction->False,
+                 Enabled->Automatic], 
+                StyleBox["\<\"File information\"\>",
+                 StripOnInput->False,
+                 FontWeight->Bold]}
+              },
+              AutoDelete->False,
+              BaselinePosition->{1, 1},
+              GridBoxAlignment->{"Columns" -> {{Left}}},
+              GridBoxBackground->{"Columns" -> {{Automatic}}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}], 
+             True->GridBox[{
+               {
+                OpenerBox[Dynamic[Typeset`var$$],
+                 Appearance->Automatic,
+                 AutoAction->False,
+                 ContinuousAction->False,
+                 Enabled->Automatic], 
+                StyleBox["\<\"File information\"\>",
+                 StripOnInput->False,
+                 FontWeight->Bold]},
+               {"", 
+                PaneBox[
+                 TagBox[
+                  TagBox[GridBox[{
+                    {"\<\"UUID\"\>", \
+"\<\"434c571e-85a0-4840-8b05-2040febba20b\"\>"},
+                    {"\<\"Path\"\>", "\<\"dmarcr1997/SurveySentament\"\>"},
+                    {"\<\"Name\"\>", "\<\"SurveySentament\"\>"},
+                    {"\<\"DisplayName\"\>", "\<\"SurveySentament\"\>"},
+                    {"\<\"OwnerWolframUUID\"\>", \
+"\<\"07157d19-6ff5-4cda-8bac-2ba60039d208\"\>"},
+                    {"\<\"OwnerCloudUserUUID\"\>", \
+"\<\"07157d19-6ff5-4cda-8bac-2ba60039d208\"\>"},
+                    {"\<\"OwnerWolframID\"\>", "\<\"dmarcr1997@gmail.com\"\>"},
+                    {"\<\"OwnerCloudUserID\"\>", \
+"\<\"dmarcr1997@gmail.com\"\>"},
+                    {"\<\"MIMEType\"\>", \
+"\<\"application/vnd.wolfram.expression.api\"\>"},
+                    {"\<\"MimeType\"\>", \
+"\<\"application/vnd.wolfram.expression.api\"\>"},
+                    {"\<\"FileType\"\>", "File"},
+                    {"\<\"FileByteCount\"\>", "2382"},
+                    {"\<\"FileHashMD5\"\>", 
+                    "185622039513552224954083065309398352526"},
+                    {"\<\"Created\"\>", 
+                    TemplateBox[{
+                    RowBox[{"\"Tue 18 Aug 2020 17:04:45\"", 
+                    StyleBox[
+                    RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5.`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}], 
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"2020", ",", "8", ",", "18", ",", "17", ",", "4", 
+                    ",", "45.`"}], "}"}], ",", "\"Instant\"", ",", 
+                    "\"Gregorian\"", ",", 
+                    RowBox[{"-", "5.`"}]}], "]"}]},
+                    "DateObject",
+                    Editable->False]},
+                    {"\<\"LastAccessed\"\>", 
+                    TemplateBox[{
+                    RowBox[{"\"Tue 18 Aug 2020 17:13:56\"", 
+                    StyleBox[
+                    RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5.`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}], 
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"2020", ",", "8", ",", "18", ",", "17", ",", "13",
+                     ",", "56.`"}], "}"}], ",", "\"Instant\"", ",", 
+                    "\"Gregorian\"", ",", 
+                    RowBox[{"-", "5.`"}]}], "]"}]},
+                    "DateObject",
+                    Editable->False]},
+                    {"\<\"LastModified\"\>", 
+                    TemplateBox[{
+                    RowBox[{"\"Tue 18 Aug 2020 17:15:04\"", 
+                    StyleBox[
+                    RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5.`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}], 
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{"2020", ",", "8", ",", "18", ",", "17", ",", "15",
+                     ",", "4"}], "}"}], ",", "\"Instant\"", ",", 
+                    "\"Gregorian\"", ",", 
+                    RowBox[{"-", "5.`"}]}], "]"}]},
+                    "DateObject",
+                    Editable->False]},
+                    {"\<\"Permissions\"\>", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"\<\"All\"\>", "\[Rule]", 
+                    RowBox[{"{", "\<\"Execute\"\>", "}"}]}], ",", 
+                    RowBox[{"\<\"Owner\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"Read\"\>", ",", "\<\"Write\"\>", 
+                    ",", "\<\"Execute\"\>"}], "}"}]}]}], "}"}]},
+                    {"\<\"Active\"\>", "True"}
+                    },
+                    AutoDelete->False,
+                    GridBoxAlignment->{"Columns" -> {Right, Left}},
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                   "Grid"],
+                  BoxForm`Undeploy,
+                  DefaultBaseStyle->{Deployed -> False}],
+                 ImageMargins->0]}
+              },
+              AutoDelete->False,
+              BaselinePosition->{1, 1},
+              GridBoxAlignment->{"Columns" -> {{Left}}},
+              GridBoxBackground->{"Columns" -> {{Automatic}}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}]}, 
+             Dynamic[Typeset`var$$],
+             Alignment->Automatic,
+             BaseStyle->{},
+             BaselinePosition->Baseline,
+             DefaultBaseStyle->"OpenerView",
+             ImageMargins->0,
+             ImageSize->Automatic], "Deploy",
+            StripOnInput->False],
+           OpenerView[{
+             Style["File information", Bold], 
+             BoxForm`Undeploy[
+              
+              Grid[{{"UUID", "434c571e-85a0-4840-8b05-2040febba20b"}, {
+                "Path", "dmarcr1997/SurveySentament"}, {
+                "Name", "SurveySentament"}, {
+                "DisplayName", "SurveySentament"}, {
+                "OwnerWolframUUID", "07157d19-6ff5-4cda-8bac-2ba60039d208"}, {
+                "OwnerCloudUserUUID", 
+                 "07157d19-6ff5-4cda-8bac-2ba60039d208"}, {
+                "OwnerWolframID", "dmarcr1997@gmail.com"}, {
+                "OwnerCloudUserID", "dmarcr1997@gmail.com"}, {
+                "MIMEType", "application/vnd.wolfram.expression.api"}, {
+                "MimeType", "application/vnd.wolfram.expression.api"}, {
+                "FileType", File}, {"FileByteCount", 2382}, {
+                "FileHashMD5", 185622039513552224954083065309398352526}, {
+                "Created", 
+                 
+                 DateObject[{2020, 8, 18, 17, 4, 45.}, "Instant", 
+                  "Gregorian", -5.]}, {"LastAccessed", 
+                 
+                 DateObject[{2020, 8, 18, 17, 13, 56.}, "Instant", 
+                  "Gregorian", -5.]}, {"LastModified", 
+                 DateObject[{2020, 8, 18, 17, 15, 4}, "Instant", 
+                  "Gregorian", -5.]}, {
+                "Permissions", {
+                 "All" -> {"Execute"}, 
+                  "Owner" -> {"Read", "Write", "Execute"}}}, {
+                "Active", True}}, Alignment -> {{Right, Left}}]]}, False, 
+            Deployed -> True]],
+          DynamicModuleValues:>{}],
+         Setting[#, {0}]& ],
+        Alignment->Left,
+        StripOnInput->False]}
+     },
+     BaselinePosition->{2, 1},
+     DefaultBaseStyle->"Column",
+     FrameStyle->GrayLevel[0.85],
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {False, True}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+     GridBoxSpacings->{
+      "Columns" -> {{Automatic}}, "Rows" -> {Automatic, 1.2}}],
+    "Column"],
+   BaselinePosition->Baseline],
+  CloudObjectInformationData[
+   Association[{
+    "UUID" -> "434c571e-85a0-4840-8b05-2040febba20b", "Path" -> 
+     "dmarcr1997/SurveySentament", "Name" -> "SurveySentament", "DisplayName" -> 
+     "SurveySentament", "OwnerWolframUUID" -> 
+     "07157d19-6ff5-4cda-8bac-2ba60039d208", "OwnerCloudUserUUID" -> 
+     "07157d19-6ff5-4cda-8bac-2ba60039d208", "OwnerWolframID" -> 
+     "dmarcr1997@gmail.com", "OwnerCloudUserID" -> "dmarcr1997@gmail.com", 
+     "MIMEType" -> "application/vnd.wolfram.expression.api", "MimeType" -> 
+     "application/vnd.wolfram.expression.api", "FileType" -> File, 
+     "FileByteCount" -> 2382, "FileHashMD5" -> 
+     185622039513552224954083065309398352526, "Created" -> 
+     DateObject[{2020, 8, 18, 17, 4, 45.}, "Instant", "Gregorian", -5.], 
+     "LastAccessed" -> 
+     DateObject[{2020, 8, 18, 17, 13, 56.}, "Instant", "Gregorian", -5.], 
+     "LastModified" -> 
+     DateObject[{2020, 8, 18, 17, 15, 4}, "Instant", "Gregorian", -5.], 
+     "Permissions" -> {
+      "All" -> {"Execute"}, "Owner" -> {"Read", "Write", "Execute"}}, 
+     "Active" -> True}]],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{{3.80677771388492*^9, 3.806777716841401*^9}},
+ CellLabel->"Out[15]=",ExpressionUUID->"c7837ebf-5a12-48cb-89d9-5d42c42dbd5e"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.806777115592203*^9, 3.8067771708071547`*^9}, 
+   3.806777703966916*^9},ExpressionUUID->"3614cf24-3624-4141-9bb3-\
+12324b6bafd7"]
+},
+WindowSize->{571.8, 524.4},
+WindowMargins->{{284.4, Automatic}, {18, Automatic}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (July 8, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"e8ed9e51-cd4c-4940-bb40-1b07acef2277"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 1672, 35, 263, "Input",ExpressionUUID->"e1464f92-185f-49dc-982d-5cf1ba69ad68"],
+Cell[2258, 59, 485, 12, 53, "Output",ExpressionUUID->"6dd92014-3cf2-47b1-be32-42ee14140f46"],
+Cell[2746, 73, 491, 10, 57, "Output",ExpressionUUID->"0263c02f-8ec9-4178-9b31-2ff05f9a0f45"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3274, 88, 177, 3, 28, "Input",ExpressionUUID->"72d3ccd3-3715-47bd-ba18-5b010479c73b"],
+Cell[3454, 93, 10356, 228, 355, "Output",ExpressionUUID->"c7837ebf-5a12-48cb-89d9-5d42c42dbd5e"]
+}, Open  ]],
+Cell[13825, 324, 177, 3, 28, InheritFromParent,ExpressionUUID->"3614cf24-3624-4141-9bb3-12324b6bafd7"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
