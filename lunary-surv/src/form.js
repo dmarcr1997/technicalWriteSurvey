@@ -3,23 +3,29 @@ import lunary from './lunLogo.png';
 import {Textarea, Text, Box, Image, Stack, Checkbox, Button } from "@chakra-ui/core";
 class Form extends Component{
     state = {
-        feedback: {
-            Question1: '',
-            Question2: '',
-            Question3: '',
-            Question4: '',
-            Question5: ''
-        }
-    
+        Question1: '',
+        Question2: '',
+        Question3: '',
+        Question4: '',
+        Question5: ''
     }
 
+    handleSubmit = (event) => {
+        let st = this.state
+        debugger 
+        this.props.submit(this.state)
+    }
 
     handleClick = (event) => {
-        debugger
+        this.setState({
+            [`${event.target.name}`]: event.target.value
+        })
     }
 
     handleChange = (event) => {
-        debugger
+        this.setState({
+            [`${event.target.name}`]: event.target.value
+        })
     }
 
     render(){
@@ -62,7 +68,7 @@ class Form extends Component{
                     <Textarea name='Question5' onChange={this.handleChange} color='black'/><br/>
                 </Box>
 
-                <Button variantColor='green'>Submit Survey</Button>
+                <Button onClick={() => this.handleSubmit()} variantColor='green'>Submit Survey</Button>
             </Box>
         )
     }
