@@ -14,7 +14,16 @@ class Form extends Component{
     }
 
 
+    handleClick = (event) => {
+        debugger
+    }
+
+    handleChange = (event) => {
+        debugger
+    }
+
     render(){
+        const vals = ["Yes, it is Awesome", "Its, ok", "No, I hate it", "Amazing! We talked through every feature", "Ok, I felt like you could have done better",  "Horrible, I was left out of everything!"]
         return(
             <Box width='100%' size='xl' rounded="lg" alignItems='center' justify='center'>
                 <Box size='xl'>
@@ -23,34 +32,34 @@ class Form extends Component{
                 <Box size='xl'>
                     <Text fontSize='lg'>Is your Website Similar to what you had in mind: </Text>
                     <Stack alignItems='center' spacing={10} isInline>
-                        <Checkbox size='sm' variantColor="green">
+                        <Checkbox value={vals[0]}name='Question1' onChange={this.handleClick} size='sm' variantColor="green">
                             Yes, it is Awesome
                         </Checkbox>
-                        <Checkbox size='sm' variantColor="green">
+                        <Checkbox value={vals[1]} name='Question1' onChange={this.handleClick} size='sm' variantColor="green">
                             Its, ok  
                         </Checkbox>
-                        <Checkbox size='sm' variantColor="green">
+                        <Checkbox value={vals[2]}name='Question1' onChange={this.handleClick} size='sm' variantColor="green">
                             No I hate it
                         </Checkbox>
                     </Stack>
                     <Text fontSize='lg'>How well did we communicate during the creation process: </Text>
                     <Stack spacing={10} isInline>
-                        <Checkbox size='sm' variantColor="green">
+                        <Checkbox value={vals[3]} name='Question2' onChange={this.handleClick} size='sm' variantColor="green">
                             Amazing. We Talked through every feature
                         </Checkbox>
-                        <Checkbox size='sm' variantColor="green">
+                        <Checkbox value={vals[4]} name='Question2' onChange={this.handleClick} size='sm' variantColor="green">
                           Ok, I felt like you could have done better 
                         </Checkbox>
-                        <Checkbox size='sm' variantColor="green">
+                        <Checkbox value={vals[5]} name='Question2' onChange={this.handleClick} size='sm' variantColor="green">
                             Horrible, I was left out of everything
                         </Checkbox>
                     </Stack>
                     <Text fontSize='lg'>Do you feel like you had control over your website: </Text><br/>
-                    <Textarea color='black' placeholder='Enter Thoughts Here'/><br/>
+                    <Textarea name='Question3' onChange={this.handleChange} color='black' placeholder='Enter Thoughts Here'/><br/>
                     <Text fontSize='lg'>Would you recommend this service to other people</Text><br/>
-                    <Textarea color='black' placeholder='Enter Comments and Experience Here'/><br/>
+                    <Textarea name='Question4' onChange={this.handleChange} color='black' placeholder='Enter Comments and Experience Here'/><br/>
                     <Text fontSize='lg'>Was there anything we missed _____________________</Text><br/>
-                    <Textarea color='black'/><br/>
+                    <Textarea name='Question5' onChange={this.handleChange} color='black'/><br/>
                 </Box>
 
                 <Button variantColor='green'>Submit Survey</Button>
