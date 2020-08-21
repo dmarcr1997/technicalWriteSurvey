@@ -1,65 +1,50 @@
 import React, {Component} from 'react';
-import { Progress } from "@chakra-ui/core";
+import { Stack } from "@chakra-ui/core";
 import Form from './form';
 import AIcomms from './AIcomms';
 class App extends Component{
   state = {
-    feedback: [],
-    submit: false, 
-    loading: false,
-    loadBar: 0
+    Question1: '',
+    Question2: '',
+    Question3: '',
+    Question4: '',
   }
 
-  getFeedback = (feedback) => {
-    this.setState({
-      feedback,
-      submit: true
-    })
-  }
-
-  toggle = () => {
-    let newSub = !this.state.submit
-    this.setState({
-      feedback: [],
-      submit: newSub,
-      loading: true
-    })
-  }
-
-  loading = (iter) => {
-    
-    let prog = (parseInt(iter[12])/200)*100
-    console.log(prog)
-    let load = this.state.loading
-    if (prog >= 100){
-      load = false
+  getFeedback = (event) => {
+    let newDat
+    let fb = event.target.value
+    let name = event.target.name
+    switch(fb){
+      case "A":
+        newDat = [1,1]
+        break
+      case "B":
+        newDat = [0,1]
+        break
+      default:
+        newDat = [0,0]
+        break
     }
+
     this.setState({
-      ...this.state,
-      loading: load,
-      loadBar: prog
+      [`${name}`]: newDat
     })
-  }
-
-  getContent = () => {
-    if (this.state.submit === false){
-      return(<Form submit={this.getFeedback}/>)
-    } else {
-      return(
-        <>
-          <Progress hasStripe isAnimated value={this.state.loadBar} />
-          <AIcomms send={this.loading} data={this.state.feedback} newForm={this.toggle}/>
-        </>
-      )
-
-    }
   }
 
   render(){
+    let {Question1, Question2, Question3, Question4} = this.state
+    let data = [Question1, Question2, Question3, Question4] 
+    debugger
     return (
       <>
-        {this.getContent()}
-       
+        <Stack spacing={4}>
+          <Stack size='5xl'>
+            <Form handleClick={this.getFeedback}/>
+          </Stack>
+          <Stack>
+            <AIcomms data={data}/>
+          </Stack>
+        </Stack>
       </>
     );
   }
