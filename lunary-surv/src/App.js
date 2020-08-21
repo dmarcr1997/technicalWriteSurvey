@@ -37,8 +37,8 @@ class App extends Component{
     debugger
     return (
       <>
-        <Stack spacing={4}>
-          <Stack size='5xl'>
+        <Stack justify='center' spacing={400}>
+          <Stack size='2xl'>
             <Form handleClick={this.getFeedback}/>
           </Stack>
           <Stack>

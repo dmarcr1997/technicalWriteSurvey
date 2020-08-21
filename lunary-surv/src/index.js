@@ -8,7 +8,7 @@ ReactDOM.render(
   
   <ThemeProvider>
     <CSSReset/>
-    <Flex color='white' height="100em" bg='#1A202C' justify="center">
+    <Flex color='white' height='100em' bg='#1A202C' alignItems='center' justify="center">
       <App />
     </Flex>
   </ThemeProvider>,

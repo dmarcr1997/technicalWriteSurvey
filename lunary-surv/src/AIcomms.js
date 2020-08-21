@@ -3,7 +3,6 @@ import { Button, useToast, Text, Stack } from "@chakra-ui/core";
 import brain from 'brain.js';
 import data from './getData';
 const AIcomms = (props) => {
-    debugger
     const toast = useToast();
     let renderInfo = () => {
         if (props.data.some(s => s === "")){
@@ -34,13 +33,11 @@ const AIcomms = (props) => {
         let count = 4
         let message
         let dat = props.data
-        debugger
         for(let i = 0; i < dat.length; i++){
             sum += (parseFloat(net.run(dat[i])))
         }
         console.log(sum/count)
-        debugger
-        if ((sum/count) > .90){
+        if ((sum/count) > .70){
             message = "Thanks For Your Feedback!!"
         } else {
             message = "I am sorry we did not satisfy your needs.\nContact us at lunary_support@lunary.com if you would like us to fix anything now"
