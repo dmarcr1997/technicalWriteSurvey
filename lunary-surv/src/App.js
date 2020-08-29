@@ -34,7 +34,6 @@ class App extends Component{
   render(){
     let {Question1, Question2, Question3, Question4} = this.state
     let data = [Question1, Question2, Question3, Question4] 
-    debugger
     return (
       <>
         <Stack justify='center' spacing={400}>

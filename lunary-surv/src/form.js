@@ -10,7 +10,7 @@ class Form extends Component{
                     <Image size='xl' src={lunary} alt="Lunary Designs Logo" />
                 </Box>
                 <Box size='xl'>
-                    <Text fontSize='lg'>Is your Website Similar to what you had in mind: </Text>
+                    <Text fontSize='lg'>Does your Website Satisfy your Needs: </Text>
                     <Stack alignItems='center' spacing={10} isInline>
                         <Radio value={vals[0]}name='Question1' onChange={this.props.handleClick} size='sm' variantColor="green">
                             Yes, it is Awesome
